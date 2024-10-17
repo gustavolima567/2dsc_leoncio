@@ -8,23 +8,30 @@ const multiplicacao = document.querySelector('.multiplicacao')
 const divisao = document.querySelector('.divisao')
 
 function calcular(){
-const n1 = number(numero1.vlue)
-const n2 = number(numero2.vlue)
+const n1 = Number(numero1.value)
+const n2 = Number(numero2.value)
 if(typeof n1 === 'number'
     && typeof n2 ==='number'  ){
-        const adicao = `a soma e ${n1} e ${n2} = ${n1+n2}`
-        alert(adicao)
+        const add = `o resultado da adisão é: ${n1+n2}`
+         const div = `o resultado da divisão é: ${n1/n2}`
+         const sub = `o resultado da subtração é: ${n1-n2}`
+         const mult = `o resultado da multiplicação é: ${n1*n2}`
+        //alert(adicao)
+        adicao.innerHTML = add
+        divisao.innerHTML = div
+        subtracao.innerHTML = sub
+        multiplicacao.innerHTML = mult
     } else{
         alert('por favor,digite um numero correto')
     }
-
-
-
-
-    const resultado = numero1.value + numero2.value
-    alert('resultado:' + resultado)
 }
 
-btncalcular.addEventListener('click', function(){
+
+
+
+
+
+btncalcular.addEventListener('click', function(evento){
+    evento.preventDefault()
     calcular()
 })
