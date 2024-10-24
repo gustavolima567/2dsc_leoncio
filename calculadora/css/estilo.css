@@ -12,6 +12,10 @@ body {
     background-color: #56c93f65;
     padding: 16px;
     border-radius: 10px;    
+    .input{
+     display: flex;
+     flex-direction: column;
+    }
 }
 input {
     margin: 8px 0;
